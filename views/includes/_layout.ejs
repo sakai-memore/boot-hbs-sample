@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  
+  <title><%- defineContent('title') %></title>
+  
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" id="ref-css">
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+  <!-- Bootstrap Font Icon CSS -->
+  <link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css">
+
+  <%- style %>
+  
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+
+
+    <%- include('_sidemenu') %>
+    
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+      <%- include('_navi') %>
+      
+      <!-- body -->
+      <%- body %>
+      
+      <footer>
+        <%- include('_footer') %>
+        <%- defineContent('footer') %>
+      </footer>
+    </div>
+    <!-- /#page-content-wrapper -->
+    
+  </div>
+  <!-- /#wrapper -->    
+  
+  <%- script %>
+  
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+  
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!-- styles -->
+<style>
+</style>
+
+<!-- Page Content -->
+<div id="page-content-wrapper">
+  <div class="container-fluid">
+    <!-- my content -->
+    <h1><%= message %></h1>
+    <h2><%= error.status %></h2>
+    <pre><%= error.stack %></pre>
+    
+    <!-- my content -->
+  </div>
+</div>
+
+
+<!-- scripts -->
+<script>
+  // Script content!
+</script>
+
+
+<% /** title, header and footer */ %>
+<%- contentFor('title') %>
+Error 
+<%- contentFor('header') %>
+
+<%- contentFor('footer') %>
