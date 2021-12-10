@@ -26,7 +26,8 @@ Volume serial number is A0B0-51B7
 ├───docs   : ** documents for apps **
 ├───node_modules
 ├───pages  : ** views **
-│   └───components : ** GUI component **
+│   ├───layouts : base layout
+│   └───partials : partial layout
 ├───routes : ** router **
 ├ .gitignore
 ├ app.js : application
@@ -52,10 +53,15 @@ found 0 vulnerabilities
 
 ## execution :
 ```bat
-PS G:\workspace\nodejs\ejsboots> npm start
+PS G:\workspace\bpmn-viewer-proto> npm start
 
-> ejsboots@0.0.0 start G:\workspace\nodejs\ejsboots
+> bpmn-viewer-proto@0.0.1 start
 > node ./bin/www
+
+G:\workspace\bpmn-viewer-proto
+APP_NAME : bpmn-viewer-proto
+MYUUID : b789a460-598b-11ec-8c83-9309593abe0a
+http://localhost:3000
 
 ```
 
@@ -64,6 +70,7 @@ PS G:\workspace\nodejs\ejsboots> npm start
 {
   "name": "bpmn-viewer-proto",
   "version": "0.0.1",
+  "type": "module",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
@@ -74,10 +81,8 @@ PS G:\workspace\nodejs\ejsboots> npm start
     "config": "^3.3.6",
     "csurf": "^1.11.0",
     "debug": "~2.6.9",
-    "ejs": "~2.6.1",
     "express": "~4.16.1",
-    "express-ejs-layouts": "^2.5.0",
-    "express-session": "^1.17.2",
+w    "express-session": "^1.17.2",
     "express-state": "^2.0.0",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",

@@ -1,25 +1,24 @@
-# 2003-express-ejs-bootstrap-site-template-01 :
+# 2112-express-hbs-bootstrap-site-template :
 
 ## overview :
-- create a express project with ejs template.
-- set index.html from bootstrap template site.
-- modify site pages with bootstrap template using ejs template engine.
+- create a express project with handlebars template.
+- modify site pages with bootstrap template using handlebars template engine.
 
 ## environment :
 ```cmd
-PS G:\workspace\nodejs> nvm list
+PS G:\workspace\bpmn-viewer-proto> nvm list
 
-  * 13.8.0 (Currently using 64-bit executable)
-    12.14.1
-    8.17.0
-PS G:\workspace\nodejs> node --version
-v13.8.0
-PS G:\workspace\nodejs> express --version
-4.16.1
+  * 16.13.0 (Currently using 64-bit executable)
+PS G:\workspace\bpmn-viewer-proto> node --version
+v16.13.0
+PS G:\workspace\bpmn-viewer-proto> npm --version
+8.1.0
 ```
 
 ## express-generator :
 ### express --view ejs --git \<project site name\>  :
+
+- [ ] FIXME: ejs-templateから変更した。
 
 ```cmd
 PS G:\workspace\nodejs> express --view ejs --git ejsboots

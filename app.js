@@ -26,10 +26,16 @@ import modelerRouter  from './routes/modeler.js';
 const app = express();
 
 // view engine setup
+const hbs = expresshandlebars.create({
+  defaultLayout: '_layout',
+  partalsDir: ['pages/partials'],
+  extname: '.hbs'
+})
+app.engine('.hbs', hbs.engine);
+app.set('view engine', '.hbs');
 const __dirname = path.resolve();
+console.log(__dirname);
 app.set('views', path.join(__dirname, 'pages'));
-app.engine('handlebars', expresshandlebars());
-app.set('view engine', 'handlebars');
 // app.set('view engine', 'ejs');
 // app.set('layout extractScripts', true);
 // app.set('layout extractStyles', true);

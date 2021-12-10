@@ -6,8 +6,8 @@
 <!-- <template> -->
     <div class="container-fluid">
       <!-- my content -->
-      <h1><%= title %></h1>
-      <p>ID : <%= myuuid %></p>
+      <h1>{{title}}</h1>
+      <p>ID : {{myuuid}}</p>
 
       <!-- my content -->
     </div>
@@ -18,11 +18,3 @@
 <script>
   // Script content!
 </script>
-
-<% /** title, header and footer */ %>
-<%- contentFor('title') %>
-<%= title %>
-
-<%- contentFor('header') %>
-
-<%- contentFor('footer') %>
