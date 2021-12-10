@@ -4,10 +4,11 @@
  * Module dependencies.
  */
 
-var app = require('../app');
-var debug = require('debug')('ejsboots:server');
-var http = require('http');
+import app from '../app.js';
+import Debug from 'debug';
+import http from 'http';
 
+const debug = Debug("bpmn-serv");
 /**
  * Get port from environment and store in Express.
  */

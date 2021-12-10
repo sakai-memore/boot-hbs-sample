@@ -1,36 +1,40 @@
-const createError = require('http-errors');
-const express = require('express');
-const expressLayouts = require('express-ejs-layouts');
-const expressState = require('express-state');
+import createError from'http-errors';
+import express from "express";
+import expressLayouts from 'express-ejs-layouts';
+import expresshandlebars from 'express-handlebars';
+import expressState from 'express-state';
 // express setting
-const path = require('path');
+import path from 'path';
 //var cookieParser = require('cookie-parser');
 // https://www.npmjs.com/package/express-session
-const session = require('express-session');
+import session from 'express-session';
 //const bodyParser = require('body-parser');
 //const csrf = require("csurf");
-const uuidv1 = require('uuid').v1;
-const CONF = require('config');
-const logger = require('morgan');
+import { v1 as uuidv1 } from 'uuid';
+import CONF from 'config';
+import logger from 'morgan';
 
 // routing setting
-const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
-const settingsRouter = require('./routes/settings');
-const viewerRouter = require('./routes/viewer');
-const modelerRouter = require('./routes/modeler');
+import indexRouter  from './routes/index.js';
+import usersRouter  from './routes/users.js';
+import settingsRouter  from './routes/settings.js';
+import viewerRouter  from './routes/viewer.js';
+import modelerRouter  from './routes/modeler.js';
 
 // apps
 //const csrfProtection = csrf({ cookie: true});
 const app = express();
 
 // view engine setup
+const __dirname = path.resolve();
 app.set('views', path.join(__dirname, 'pages'));
-app.set('view engine', 'ejs');
-app.set('layout extractScripts', true);
-app.set('layout extractStyles', true);
-app.set('layout', 'components/_layout');
-app.use(expressLayouts);
+app.engine('handlebars', expresshandlebars());
+app.set('view engine', 'handlebars');
+// app.set('view engine', 'ejs');
+// app.set('layout extractScripts', true);
+// app.set('layout extractStyles', true);
+// app.set('layout', 'components/_layout');
+//app.use(expressLayouts);
 
 // express middleware
 app.use(logger('dev'));
@@ -89,4 +93,4 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app;
+export default app;

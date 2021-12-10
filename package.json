@@ -1,6 +1,7 @@
 {
   "name": "bpmn-viewer-proto",
   "version": "0.0.1",
+  "type": "module",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
@@ -14,6 +15,7 @@
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "express-ejs-layouts": "^2.5.0",
+    "express-handlebars": "^6.0.2",
     "express-session": "^1.17.2",
     "express-state": "^2.0.0",
     "http-errors": "~1.6.3",
