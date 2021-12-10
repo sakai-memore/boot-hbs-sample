@@ -82,7 +82,7 @@ http://localhost:3000
     "csurf": "^1.11.0",
     "debug": "~2.6.9",
     "express": "~4.16.1",
-w    "express-session": "^1.17.2",
+    "express-session": "^1.17.2",
     "express-state": "^2.0.0",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
