@@ -25,18 +25,18 @@ const modelerRouter = require('./routes/modeler');
 const app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'pages'));
 app.set('view engine', 'ejs');
 app.set('layout extractScripts', true);
 app.set('layout extractStyles', true);
-app.set('layout', 'includes/_layout');
+app.set('layout', 'components/_layout');
 app.use(expressLayouts);
 
 // express middleware
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'assets')));
 
 // use session
 const sess = {
