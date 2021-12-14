@@ -1,13 +1,45 @@
-# bpmn-viewer-proto :
+# express-hbs-bootstrap template : 
+- repos: boot-hbs-sample 
 
 ## overview :
 - simple prototype of web apps for bpmn viewer and modeler components.  
 - use below;
   + language: **nodejs**
   + httpd: **expressjs**
-  + template engine: **ejs**
+  + template engine: **handlebars**
+  + modulization
 
-## structure
+## installation :
+
+```
+PS G:\workspace > git clone https://github.com/sakai-memore/boot-hbs-sample.git
+
+Cloning into 'boot-hbs-sample'...
+remote: Enumerating objects: 61, done.
+remote: Counting objects: 100% (61/61), done.
+remote: Compressing objects: 100% (41/41), done.
+
+Unpacking objects: 100% (61/61), done.
+PS G:\workspace> cd .\boot-hbs-sample\
+PS G:\workspace\boot-hbs-sample > npm install
+added 54 packages from 39 contributors and audited 142 packages in 4.2s
+found 0 vulnerabilities
+```
+
+## execution :
+```bat
+PS G:\workspace\boot-hbs-sample> npm start
+
+> boot-hbs-sample@0.0.1 start
+> node ./bin/www
+
+G:\workspace\boot-hbs-sample
+APP_NAME : boot-hbs-sample
+MYUUID : de01bf00-5c9d-11ec-b716-579b020fa564
+http://localhost:3000
+```
+
+## source structure
 ```bat
 PS G:\workspace\bpmn-viewer-proto> tree
 Folder PATH listing for volume New Volume
@@ -35,40 +67,10 @@ Volume serial number is A0B0-51B7
 └ README.md
 ```
 
-## installation :
-
-```
-PS G:\sandbox> git clone https://github.com/sakai-memoru/ejsboots.git
-Cloning into 'ejsboots'...
-remote: Enumerating objects: 61, done.
-remote: Counting objects: 100% (61/61), done.
-remote: Compressing objects: 100% (41/41), done.
-
-Unpacking objects: 100% (61/61), done.
-PS G:\sandbox> cd .\ejsboots\
-PS G:\sandbox\ejsboots> npm install
-added 54 packages from 39 contributors and audited 142 packages in 4.2s
-found 0 vulnerabilities
-```
-
-## execution :
-```bat
-PS G:\workspace\bpmn-viewer-proto> npm start
-
-> bpmn-viewer-proto@0.0.1 start
-> node ./bin/www
-
-G:\workspace\bpmn-viewer-proto
-APP_NAME : bpmn-viewer-proto
-MYUUID : b789a460-598b-11ec-8c83-9309593abe0a
-http://localhost:3000
-
-```
-
 ## package.json :
 ```json
 {
-  "name": "bpmn-viewer-proto",
+  "name": "boot-hbs-sample",
   "version": "0.0.1",
   "type": "module",
   "private": true,
@@ -82,6 +84,8 @@ http://localhost:3000
     "csurf": "^1.11.0",
     "debug": "~2.6.9",
     "express": "~4.16.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-handlebars": "^6.0.2",
     "express-session": "^1.17.2",
     "express-state": "^2.0.0",
     "http-errors": "~1.6.3",
@@ -90,6 +94,10 @@ http://localhost:3000
   }
 }
 ````
+
+## screenshot
+
+![screenshot](https://gyazo.com/b1488a227eea1f5e1c4178c3bab2cf60.png)
 
 ## reference :
 - startbootstrap.com
