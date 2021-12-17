@@ -28,7 +28,7 @@ const app = express();
 // view engine setup
 const hbs = expresshandlebars.create({
   defaultLayout: '_layout',
-  partalsDir: ['pages/partials'],
+  partialsDir: ['pages/partials'],
   extname: '.hbs'
 })
 app.engine('.hbs', hbs.engine);
